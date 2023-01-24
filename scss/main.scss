@@ -1,0 +1,136 @@
+@import "./colors";
+@import "./fonts";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Macklin Regular", Arial, Helvetica, sans-serif;
+}
+body {
+    max-width: 90rem;
+    margin-inline: auto;
+    .container {
+        width: 91.45%;
+        max-width: 82.305rem;
+        margin-inline: auto;
+    }
+}
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+h1 {
+    font-family: "Macklin Bold", Arial, Helvetica, sans-serif;
+    font-size: f-clamp(1, 3.5);
+    margin-block: f-clamp(0.5, 3);
+}
+h2 {
+    font-family: "Macklin Regular", Arial, Helvetica, sans-serif;
+    font-size: f-clamp(0.8, 2);
+    margin-bottom: f-clamp(0.4, 2.5);
+}
+h3 {
+    font-family: "Macklin Regular", Arial, Helvetica, sans-serif;
+    font-size: f-clamp(0.6, 1.5);
+    margin-bottom: f-clamp(0.25, 2);
+}
+th {
+    font-family: "Macklin Bold", Arial, Helvetica, sans-serif;
+    font-size: f-clamp(1, 1.5);
+    color: $txt-dark;
+    margin-block: 0.25em;
+    text-align: left;
+    padding-left: 4px;
+    padding-block: 2em 0.75em;
+
+}
+p, td {
+    font-family: "Macklin Light", Arial, Helvetica, sans-serif;
+    font-size: f-clamp(0.6, 1.5);
+    margin-block: 0.25em;
+}
+a {
+    text-decoration: none;
+    color: $txt-light;
+}
+strong {
+    font-family: "Macklin Regular", Arial, Helvetica, sans-serif;
+}
+
+.deckblatt {
+    &-bg {
+        background-color: $clr-hdw;
+        width: 100%;
+        aspect-ratio: 297 / 210;
+        padding: 7.785% 7.273%;
+        margin-bottom: 5rem;
+    }
+    &-content {
+        height: 100%;
+        color: $txt-light;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        &-bottom {
+            justify-content: flex-end;
+            display: grid;
+            grid-template-columns: 80% 1fr;
+            align-items: center;
+        }
+        li {
+            list-style-image: url(../images/chevron-right-light.svg);
+            max-width: fit-content;
+        }
+    }
+}
+.container {
+    main {
+        table {
+            border-spacing: 0;
+            color: $txt-dark;
+            th {
+                border-bottom: 1px solid $txt-dark;
+            }
+            tr:nth-child(even):not(.table-light) {
+                background: $bg-table;
+            }
+            .table {
+                &-dark {
+                    background-color: $bg-table;
+                }
+            }
+            first-of-type {
+                border-top: 1px solid $txt-dark;
+            }
+            tr {
+                > td:first-child {
+                    border-right: 1px solid $txt-dark;
+                    font-family: "Macklin Regular", Arial, Helvetica, sans-serif;
+                }
+            }
+            td {
+                padding-inline: 1.5rem;
+                border-bottom: 1px solid $txt-dark;
+                padding-block: 1em;
+                li {
+                    font-family: "Macklin Light", Arial, Helvetica, sans-serif;
+                }
+                &.passermarke {
+                    img {
+                        width: 50%;
+                        margin-left: 1rem;
+                        vertical-align: middle;
+                    }
+                    
+                }
+            }
+        }
+        li {
+            list-style-image: url(../images/chevron-right-dark.svg);
+            list-style-position: outside;
+        }
+    }
+}

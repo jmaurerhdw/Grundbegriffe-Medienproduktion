@@ -1,0 +1,140 @@
+@font-face {
+  font-family: "Macklin Bold";
+  src: url(../fonts/MacklinSans/MacklinSans-Bold.otf);
+}
+@font-face {
+  font-family: "Macklin Regular";
+  src: url(../fonts/MacklinSans/MacklinSans-Regular.otf) format("opentype");
+}
+@font-face {
+  font-family: "Macklin Light";
+  src: url(../fonts/MacklinSans/MacklinSans-Light.otf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Macklin Regular", Arial, Helvetica, sans-serif;
+}
+
+body {
+  max-width: 90rem;
+  margin-inline: auto;
+}
+body .container {
+  width: 91.45%;
+  max-width: 82.305rem;
+  margin-inline: auto;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+h1 {
+  font-family: "Macklin Bold", Arial, Helvetica, sans-serif;
+  font-size: clamp(1rem, 0.0714285714rem + 3.8095238095vw, 3.5rem);
+  margin-block: clamp(0.5rem, -0.4285714286rem + 3.8095238095vw, 3rem);
+}
+
+h2 {
+  font-family: "Macklin Regular", Arial, Helvetica, sans-serif;
+  font-size: clamp(0.8rem, 0.3542857143rem + 1.8285714286vw, 2rem);
+  margin-bottom: clamp(0.4rem, -0.38rem + 3.2vw, 2.5rem);
+}
+
+h3 {
+  font-family: "Macklin Regular", Arial, Helvetica, sans-serif;
+  font-size: clamp(0.6rem, 0.2657142857rem + 1.3714285714vw, 1.5rem);
+  margin-bottom: clamp(0.25rem, -0.4rem + 2.6666666667vw, 2rem);
+}
+
+th {
+  font-family: "Macklin Bold", Arial, Helvetica, sans-serif;
+  font-size: clamp(1rem, 0.8142857143rem + 0.7619047619vw, 1.5rem);
+  color: #48515b;
+  margin-block: 0.25em;
+  text-align: left;
+  padding-left: 4px;
+  padding-block: 2em 0.75em;
+}
+
+p, td {
+  font-family: "Macklin Light", Arial, Helvetica, sans-serif;
+  font-size: clamp(0.6rem, 0.2657142857rem + 1.3714285714vw, 1.5rem);
+  margin-block: 0.25em;
+}
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+strong {
+  font-family: "Macklin Regular", Arial, Helvetica, sans-serif;
+}
+
+.deckblatt-bg {
+  background-color: #253c47;
+  width: 100%;
+  aspect-ratio: 297/210;
+  padding: 7.785% 7.273%;
+  margin-bottom: 5rem;
+}
+.deckblatt-content {
+  height: 100%;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.deckblatt-content-bottom {
+  justify-content: flex-end;
+  display: grid;
+  grid-template-columns: 80% 1fr;
+  align-items: center;
+}
+.deckblatt-content li {
+  list-style-image: url(../images/chevron-right-light.svg);
+  max-width: fit-content;
+}
+
+.container main table {
+  border-spacing: 0;
+  color: #48515b;
+}
+.container main table th {
+  border-bottom: 1px solid #48515b;
+}
+.container main table tr:nth-child(even):not(.table-light) {
+  background: rgba(37, 60, 71, 0.2);
+}
+.container main table .table-dark {
+  background-color: rgba(37, 60, 71, 0.2);
+}
+.container main table first-of-type {
+  border-top: 1px solid #48515b;
+}
+.container main table tr > td:first-child {
+  border-right: 1px solid #48515b;
+  font-family: "Macklin Regular", Arial, Helvetica, sans-serif;
+}
+.container main table td {
+  padding-inline: 1.5rem;
+  border-bottom: 1px solid #48515b;
+  padding-block: 1em;
+}
+.container main table td li {
+  font-family: "Macklin Light", Arial, Helvetica, sans-serif;
+}
+.container main table td.passermarke img {
+  width: 50%;
+  margin-left: 1rem;
+  vertical-align: middle;
+}
+.container main li {
+  list-style-image: url(../images/chevron-right-dark.svg);
+  list-style-position: outside;
+}/*# sourceMappingURL=main.css.map */

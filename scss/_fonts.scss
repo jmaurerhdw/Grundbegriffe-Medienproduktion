@@ -1,0 +1,18 @@
+@font-face {
+    font-family: "Macklin Bold";
+    src: url(../fonts/MacklinSans/MacklinSans-Bold.otf);
+}
+@font-face {
+    font-family: "Macklin Regular";
+    src: url(../fonts/MacklinSans/MacklinSans-Regular.otf) format("opentype");
+}
+@font-face {
+    font-family: "Macklin Light";
+    src: url(../fonts/MacklinSans/MacklinSans-Light.otf);
+}
+
+@function f-clamp($a, $b) {
+    $m: calc(($b - $a) / (90 - 24.375));
+    $y: $a - $m * 24.375;
+    @return clamp($a * 1rem, $y * 1rem + $m * 100vw, $b * 1rem);
+}
